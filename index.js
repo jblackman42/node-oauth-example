@@ -6,8 +6,8 @@ const axios = require('axios')
 
 // This is the client ID and client secret that you obtained
 // while registering the application
-const clientID = '<your client id>'
-const clientSecret = '<your client secret>'
+const clientID = 'c398e17e424893287876'
+const clientSecret = 'a128b3cd49bde8952f1f1a249218609245445fc3'
 
 // Create a new express application and use
 // the express static middleware, to serve all files
@@ -19,6 +19,7 @@ app.get('/oauth/redirect', (req, res) => {
   // The req.query object has the query params that
   // were sent to this route. We want the `code` param
   const requestToken = req.query.code
+  console.log(req.query)
   axios({
     // make a POST request
     method: 'post',

@@ -17,6 +17,8 @@
 	const query = window.location.search.substring(1)
 	const token = query.split('access_token=')[1]
 
+	console.log(query, token)
+
 	// Call the user info API using the fetch browser library
 	fetch('https://api.github.com/user', {
 			headers: {
